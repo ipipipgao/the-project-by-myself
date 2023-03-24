@@ -13,13 +13,10 @@ import java.util.Map;
 public class NewController {
 
     @RequestMapping("/student")
-    public User user() {
+    public Map<String,String> user() {
         Map<String,String> map = new HashMap<>();
-        map.put("habit","sport and eating");
-        User user = new User();
-        user.setName("theonefx");
-        user.setAge(666);
-        user.setScore(99);
-        return user;
+        map.put("name","zhangsan");
+        map.put("age","2900");
+        return map;
     }
 }
