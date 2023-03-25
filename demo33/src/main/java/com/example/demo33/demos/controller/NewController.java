@@ -1,6 +1,5 @@
 package com.example.demo33.demos.controller;
 
-import com.example.demo33.demos.web.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
