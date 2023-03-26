@@ -1,7 +1,7 @@
-package com.example.demo33.demos.service.serviceimpl;
+package com.example.demo33.demos.service.impl;
 
 import com.example.demo33.demos.mapper.UserMapper;
-import com.example.demo33.demos.pojo.user;
+import com.example.demo33.demos.pojo.User;
 import com.example.demo33.demos.service.AddService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ public class AddServiceImpl implements AddService {
     //Override是重写方法
     @Override
     public Map<String, String> add(Map<String, String> data) {
-        user user = new user();
+        User user = new User();
         user.setUsername(data.get("name"));
         user.setPassword(data.get("password"));
         userMapper.insert(user);
