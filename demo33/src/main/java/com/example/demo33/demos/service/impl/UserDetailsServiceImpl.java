@@ -21,14 +21,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     //试试最上面的username能不能改
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        //s默认为输入行的第一个输入行
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("username",username);
         User user = userMapper.selectOne(queryWrapper);
         if(user == null) {
-            //抛一个异常,忘了咋写了，这个Runtime异常应该是给你爆一个超时的异常卡住你
-            throw new RuntimeException("用超时卡住你");
+            throw new RuntimeException("用户不存在");
         }
-
 
         return new UserDetailsImpl(user);
     }
