@@ -16,23 +16,17 @@ public class AddServiceImpl implements AddService {
 
     @Autowired
     public UserMapper userMapper;
-
     @Autowired
     public PasswordEncoder passwordEncoder;
-    //Override是重写方法
     @Override
     public Map<String, String> add(Map<String, String> data) {
         User user = new User();
-
         user.setUsername(data.get("username"));
-//        user.setPassword(data.get("password"));
         user.setPassword(passwordEncoder.encode(data.get("password")));
         userMapper.insert(user);
-
         Map<String,String> map = new HashMap<>();
         map.put("error_message","success");
         System.out.println("addserviceimpl");
-
         return map;
     }
 }

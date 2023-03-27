@@ -1,5 +1,5 @@
 package com.example.demo33.demos.service.impl.util;
-
+//这个接口是处理登录完成之后对用户权限的判定的
 import com.example.demo33.demos.pojo.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;

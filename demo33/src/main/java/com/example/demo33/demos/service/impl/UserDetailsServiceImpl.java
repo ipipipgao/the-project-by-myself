@@ -1,4 +1,5 @@
 package com.example.demo33.demos.service.impl;
+//这个类结成的接口就是来源于spring——securi这个依赖，依赖相当于代码库，这个接口是管理
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.demo33.demos.mapper.UserMapper;
