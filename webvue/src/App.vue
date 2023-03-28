@@ -18,12 +18,13 @@ export default ({
   },
   setup() {
     $.ajax({
-      url: "http://127.0.0.1:8848/user/account/token",
+      url: "http://127.0.0.1:8848/user/account/register",
       type: "post",
       //前端虽然没有注明数据返回给后端的格式，但是后端可以用参数Map<String,String>来接受
       data: {
-        username: "zzj",
-        password: "pzzj",
+        username: "zc",
+        password: "pzc",
+        confirmedPassword:"pzc"
       },
       success(resp) {
         console.log(resp);

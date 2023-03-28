@@ -27,13 +27,5 @@ public class LoginController {
     }
 
 
-    //     待解决
-    @GetMapping("/user/account/register")
-    public Map<String,String> register(String username,String password) {
-        Map<String,String> map = new HashMap<>();
-        map.put("username",username);
-        map.put("password",password);
-        return map;
-    }
 
 }

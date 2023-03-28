@@ -8,5 +8,5 @@ import java.util.Map;
 public interface RegisterService {
 
     //参数用驼峰命名法
-    Map<String,String> regitster(String username, String password, String confirmedpassword);
+    Map<String,String> register(String username, String password, String confirmedpassword);
 }
